@@ -1,0 +1,21 @@
+/* FONT-WEIGHT: BOLD; */
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background: #f0f0f5;
+    -webkit-font-smoothing: antialised;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #322153;
+}
