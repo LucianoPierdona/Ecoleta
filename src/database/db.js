@@ -1,14 +1,14 @@
 // importar a dependencia do sqlite3
-const sqlite3 = require("sqlite3").verbose()
+const sqlite3 = require("sqlite3").verbose();
 
 // criar o objeto de banco de dados
-const db = new sqlite3.Database("./src/database/database.db")
+const db = new sqlite3.Database("./src/database/database.db");
 
-module.exports = db
+module.exports = db;
 // utilizar o objeto do banco de dados para operações
 
 db.serialize(() => {
-    /*// Criar uma tabela com comandos SQL
+  /*// Criar uma tabela com comandos SQL
     db.run(`
         CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -53,11 +53,11 @@ db.serialize(() => {
         console.log("Aqui estão seus registros")
         console.log(rows)
     })*/
-    // Deletar
-    db.run(`DELETE FROM places WHERE id = ?`, [5], function (err, rows) {
-        if (err) {
-            return console.log(err)
-        }
-        console.log("Aqui estão seus registros")
-    })
-})
+  // Deletar
+  db.run(`DELETE FROM places WHERE id = ?`, [5], function (err, rows) {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("Aqui estão seus registros");
+  });
+});
